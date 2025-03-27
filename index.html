@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kar Tanesi Uçuşu ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Kalp Sayaç Barı -->
+  <div id="heartBar">
+    <img src="heart_empty.png" class="heart">
+    <img src="heart_empty.png" class="heart">
+    <img src="heart_empty.png" class="heart">
+  </div>
+
+  <!-- Başlangıç ekranı -->
+  <div id="startScreen">
+    <h1>Uçağını Seç! ✈️</h1>
+    <p class="intro-msg">Bu oyunu kazanmak için 3 kalp toplamalısın 💗💗💗</p>
+    <p>Kar tanesi, hangisiyle uçmak istersin?</p>
+    <div class="plane-options">
+      <img src="plane_pink.png" id="pinkPlane" alt="Pembe Uçak">
+      <img src="plane_blue.png" id="bluePlane" alt="Mavi Uçak">
+    </div>
+  </div>
+
+  <!-- Yıldız efekti (kazanan için) -->
+  <div id="starContainer" style="display: none;"></div>
+
+  <!-- Oyun alanı -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Mesaj ve yeniden dene -->
+  <div id="message"></div>
+  <button id="retryBtn" style="display:none;">🔁 Yeniden Dene</button>
+
+  <script src="game.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+  background: url('bulutlar.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.intro-msg {
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#heartBar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 4;
+}
+.heart {
+  width: 24px;
+  margin-left: 5px;
+}
+
+#startScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('bulutlar.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plane-options img {
+  width: 120px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.plane-options img:hover {
+  transform: scale(1.1);
+}
+
+#gameCanvas {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 480px;
+  height: 640px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 20px; /* 🆙 Daha büyük */
+  font-weight: bold;
+  color: white; /* Beyaz renk */
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000; /* 🔲 Siyah kenarlık efekti */
+  display: none;
+  z-index: 3;
+  max-width: 90vw;
+  line-height: 2em;
+  padding: 10px;
+}
+
+
+#retryBtn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff69b4;
+  color: white;
+  display: none;
+  z-index: 3;
+  cursor: pointer;
+}
+#retryBtn:hover {
+  background-color: #ff1493;
+}
+
+#starContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+.star {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  animation: fall 6s linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(-50px); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
